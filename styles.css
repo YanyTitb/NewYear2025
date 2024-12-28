@@ -1,0 +1,114 @@
+/* styles.css */
+body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  animation: backgroundChange 5s infinite alternate;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  }
+  100% {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  }
+}
+
+header h1 {
+  font-size: 3em;
+  animation: bounceTitle 1s ease-out infinite alternate;
+}
+
+@keyframes bounceTitle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.response-area,
+.quote-area {
+  margin: 20px 0;
+  font-size: 1.5em;
+  animation: floatText 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+
+.effects-area {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  border-radius: 50%;
+  animation: explode 1.5s ease-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  background: radial-gradient(circle, #ff5733, #c70039);
+  border-radius: 50%;
+  position: absolute;
+  animation: float 5s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.music-area iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+}
